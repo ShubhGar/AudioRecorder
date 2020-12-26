@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkw-vj-ydw">
+                                <rect key="frame" x="123" y="94" width="168" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Start Recording"/>
+                                <connections>
+                                    <action selector="startRecordingBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XRh-V6-2X3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tY-X5-qpt">
+                                <rect key="frame" x="117.5" y="186" width="179" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Stop Recordeing"/>
+                                <connections>
+                                    <action selector="StopRecordingBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SBe-uZ-JyQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTN-wD-J2V">
+                                <rect key="frame" x="184" y="328" width="46" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playPauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nE7-Cv-reo"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="472-fn-L1A">
+                                <rect key="frame" x="70" y="420" width="274" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="472-fn-L1A" firstAttribute="top" secondItem="eTN-wD-J2V" secondAttribute="bottom" constant="50" id="65I-db-vbt"/>
+                            <constraint firstItem="eTN-wD-J2V" firstAttribute="top" secondItem="8tY-X5-qpt" secondAttribute="bottom" constant="100" id="6K4-pT-iKO"/>
+                            <constraint firstItem="8tY-X5-qpt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PK3-dg-Gj4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="472-fn-L1A" secondAttribute="trailing" constant="50" id="VlD-vu-12M"/>
+                            <constraint firstItem="bkw-vj-ydw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="YyF-5i-EIr"/>
+                            <constraint firstItem="eTN-wD-J2V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dZ8-fa-vkq"/>
+                            <constraint firstItem="bkw-vj-ydw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="faK-wh-sJw"/>
+                            <constraint firstItem="8tY-X5-qpt" firstAttribute="top" secondItem="bkw-vj-ydw" secondAttribute="bottom" constant="50" id="oPG-NZ-JQr"/>
+                            <constraint firstItem="472-fn-L1A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="yYx-Iy-1GV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playPauseBtn" destination="eTN-wD-J2V" id="gws-PB-Tq2"/>
+                        <outlet property="progressBar" destination="472-fn-L1A" id="Qol-Jq-4tC"/>
+                        <outlet property="startRecordingBtn" destination="bkw-vj-ydw" id="QC3-Cc-kdJ"/>
+                        <outlet property="stopRecordingBtn" destination="8tY-X5-qpt" id="lZ4-93-KcD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="117"/>
+        </scene>
+    </scenes>
+</document>
